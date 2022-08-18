@@ -10,7 +10,7 @@ function Header(){
             <HeaderCartButton />
             </header>
             <div className={classes['main-image']}>
-                <img src={meanlsImage}/>
+                <img src={meanlsImage} alt='A Full Of Delicious Food'/>
             </div>
         </Fragment>
     )

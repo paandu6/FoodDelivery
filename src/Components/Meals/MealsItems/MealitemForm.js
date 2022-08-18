@@ -5,7 +5,7 @@ function MealItemForm(props){
         <form className={classes.form}>
             <MealItemInput label='Amount'
             input={{
-                id:'amount',
+                id:'amount_'+props.itemid,
                 type:'number',
                 defaultValue:1,
                 step:1,

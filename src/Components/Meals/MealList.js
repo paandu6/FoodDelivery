@@ -32,10 +32,10 @@ const DUMMY_MEALS = [
 
 function MealsList(){
     const MealsData =DUMMY_MEALS.map((meals)=>{
-    return(<MealsItems name={meals.name} description={meals.description} price={meals.price}/>)
+    return(<MealsItems name={meals.name} description={meals.description} price={meals.price} id={meals.id}/>)
     })
     return(
-     
+    
         <section className={classes.meals}>
             <Card>
             <ul>
