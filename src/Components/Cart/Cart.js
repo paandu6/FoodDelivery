@@ -1,6 +1,5 @@
 import classes from './Cart.module.css'
 import Modal from './Modal'
-import ModalDummy from './ModalDummy'
 function Cart(props){
     const cartItems=<ul className={classes['cart-items']}>{[{id:'c1',name:'Pizza',price:99,}].map((items)=>{
         return(
@@ -8,7 +7,7 @@ function Cart(props){
         )
     })}</ul>
     return(
-        <ModalDummy> 
+        <Modal onClick={props.onClick}> 
         {cartItems}
         <div >
             <div className={classes.total}>
@@ -17,11 +16,11 @@ function Cart(props){
                 
             </div>
             <div className={classes.actions}>
-                <button className={classes['button--alt']}>Cancel</button>
+                <button className={classes['button--alt']} onClick={props.onClick}>Cancel</button>
                 <button className={classes.button}>Order</button>
             </div>
         </div>
-        </ModalDummy>
+        </Modal>
     )
 }
 export default Cart
