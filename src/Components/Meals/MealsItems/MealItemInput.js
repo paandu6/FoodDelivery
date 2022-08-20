@@ -1,10 +1,13 @@
 import classes from './MealItemInput.module.css'
-function MealItemInput(props){
+import React from 'react'
+
+
+const MealItemInput=React.forwardRef((props,ref)=>{
     return(
         <div className={classes.input}>
-        <label htmlfor={props.input.id}>{props.label}</label>
-        <input {...props.input}></input>
+        <label htmlFor={props.input.id}>{props.label}</label>
+        <input  ref={ref}{...props.input} ></input>
         </div>
     )
-}
+})
 export default MealItemInput
