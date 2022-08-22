@@ -40,8 +40,8 @@ function cartreducer(state,action){
         const existingitem = state.items[existingitemindex]
         const updatedtotalamount =state.totalamount -existingitem.price
         let updateditems;
-        if(updatedtotalamount ===1){
-            updateditems=state.items.filter(item => item.id !==action.id)
+        if(existingitem.amount ===1){
+            updateditems=state.items.filter(item => item.id !== action.id)
         }else{
             const updateditem ={...existingitem, amount: existingitem.amount-1}
             updateditems=[...state.items]
